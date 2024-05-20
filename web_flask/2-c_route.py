@@ -16,9 +16,9 @@ def index():
     """returns HBNB"""
     return 'HBNB'
 @app.route('/c/<text>', strict_slashes=False)
-def index():
+def cText():
     """display "C" followed by the value of the text variable"""
-    retrun 'C ' + text.replace('_', ' ')
+    return "C {}".format(text.replace("_", " "))
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='5000')
